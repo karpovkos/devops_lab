@@ -1,0 +1,13 @@
+apache_vhosts:
+- address: "*:80"
+  servername: "www.domain.com"
+  documentroot: '"/www/domain"'
+  serveradmin: "www@admina.net"
+  directorypath: '"/usr/local/httpd/htdocs"'
+- address: "*:443"
+  servername: "www.example.com"
+  serveradmin: "www@admina.net"
+  directorypath: '"/usr/local/httpd/htdocs"'
+  rewriteengine: "on"
+  directoryindex: "index.php index.html"
+  
