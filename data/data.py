@@ -49,14 +49,15 @@ parser.add_argument("-t", help="Output file type", default="txt")
 args = parser.parse_args()
 
 
-erase()
-num = 0
-while True:
-    num += 1
-    obj = GetSystemInfo(num)
-    # obj.prt()
-    if args.t == "json":
-        obj.savejson()
-    else:
-        obj.savetxt()
-    time.sleep(args.i)
+def main():
+    erase()
+    num = 0
+    while True:
+        num += 1
+        obj = GetSystemInfo(num)
+        # obj.prt()
+        if args.t == "json":
+            obj.savejson()
+        else:
+            obj.savetxt()
+        time.sleep(args.i)

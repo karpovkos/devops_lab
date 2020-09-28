@@ -5,7 +5,7 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "snapshot = data.data",
+            "snapshot = data.data:main",
         ],
     },
     install_requires=[
